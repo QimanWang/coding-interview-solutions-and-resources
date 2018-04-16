@@ -1,0 +1,54 @@
+//Tree
+- one root node
+- single path from parent to child
+- leaf node are the lowest layer nodes
+
+// Binary Search Tree
+
+*run time
+- All operation will be O(lg(N)) on average
+insert, search, remove
+iff the tree is balanced
+balanced meaning the leaf node on same height
+otherwise it's the same as a linked list
+the worst case is still O(N)
+this works because every comparison get rid of half
+- every node have at most 2 children
+- left child is smaller than parent
+- right child is greater than parent
+- height = number of layers
+
+*operation
+- insert
+- search
+if the tree is not balanced,
+it will not be O(lg(N))
+- findSmallest() //go all the way left
+- findLargest() //right most leaf node
+-- Deletion
+- leaf node : find it and remove it
+- node with one child: get parent pointer
+and point it to the child of the node that we remove
+- node with two children:
+find the predecessor and successor
+case1: swap with predecessor, then remove the node
+case2: swap with successor, then update the pointer
+- traversal : visit every node
+1. in-order traversal:
+ left subtree, root, right subtree recursively
+ result: items will be in order, numerically or alphabetically
+2. pre-order traversal:
+ root, left subtree, right subtree recursively
+ result:
+3. post-order traversal:diagnoal right to left
+ left subtree, right subtree, root recursively
+ result: start left most leaf, then all lowest leaf,
+ once left sub tree leaf are visited,
+ we traverse diagnoal from bottom right to top left
+
+
+
+
+
+
+

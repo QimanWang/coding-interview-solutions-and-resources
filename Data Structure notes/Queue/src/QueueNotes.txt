@@ -1,0 +1,18 @@
+//Queue
+
+*
+- abstract data type (interface)
+- FIFO , first in first out
+- implemented using dynamic array or linked list
+
+*operation
+- enqueue //insert a item into the queue, O(1) fast
+- dequeue //remove the first item in the queue O(1) fast
+
+*applications
+- when a resource is shared among several consumers (threads)
+- cpu scheduling
+- data transfer at different rate
+- IO buffers
+- Stochastic modeling
+

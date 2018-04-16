@@ -1,0 +1,31 @@
+//Stack
+
+*
+- abstract data type (interface)
+- LIFO , last in first out
+- implemented using array or linked list
+- alot of programming languages use stack structure
+- graph algorithm uses stack
+
+*operation
+- push(6) //O(1) fast, adding items to stack
+- pop() //O(1) fast, take out the last item added,
+the one on top.
+- peek() //O(1) return the value at the top,
+doesn't remove the item
+
+*usage
+- depth first search , recursion uses stack
+- factorial(4), pushed onto call stack, then calls
+factorial(3).
+- evaluate expression (PEMDAS)
+
+*stack using linked list
+- dynamic
+
+*stack using array
+- manually resize
+
+
+
+

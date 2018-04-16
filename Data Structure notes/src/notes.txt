@@ -1,0 +1,21 @@
+//array
+- store same type
+- indices as keys
+- N dimension
+- not dynamic , have to specify size
+- application: lookup tables/ hash tables, heaps
+
+*advantages
+- Random access O(1), no need to search
+- good for adding alot of items, and access given indices
+
+*disadvantages
+- have to know size
+- if full, we need to copy to bigger
+- items have to be same type
+
+*operations
+- add(12), add(1) //insert at the next empty spot
+
+______________________________________________________________
+

@@ -1,0 +1,68 @@
+//Priority Queues
+
+*properties
+- implemented using heap
+- heap is implemented using 1-d array
+- similar to queues, difference is
+highest priority is retrieved first
+- assign a priority value to each element in the array
+
+*operation
+- insertWithPriority(data, Priority)
+sometimes if the data is a integer,
+it can be used as priority
+-getHighestPriority
+return the element with highest priority,
+then we have to reorganize teh heap
+-peak() //see what is the highest priority item
+~heap are tree like structure
+-Sorting , insert item sorted,
+ heap sort
+
+
+//heap
+- binary tree
+- min heap , parent is lower value
+- max heap , parent is higher value
+- dijkstra, prim
+- complete tree
+insert order, is root-left-right, always
+
+~array representation
+root is index 0, the two children are index 1,2.
+parent =i, left = 2i+1, right = 2i+2
+~if heap is violated, we heapify
+when inserting, if violated,
+we swap the parent and child
+-O(N) to construct a heap
+reconstruct is O(lg(N))
+O(N) + O(lg(N)) = O(N)
+
+*operation
+- delete root, removes the root,
+ we put last item into the root.
+ O(1) to remove, then reconstruct is O(lg(N))
+ = O(lg(N))
+
+-delete a certain item,
+search O(N)+ O(lg(N)) to reconstruct = O(N)
+
+~heapSort
+-use heap structure rather than linear to find max
+- in place algorithm , so no extra memory
+- not stable, same item keys gets mixed
+- steps of heap sort,
+swap root with last element,
+no need to consider it anymore,
+heapify then repeat
+N access, lg(N) reconstruct
+O(N *lg(N))
+
+~running time
+- memory , linear array O(N)
+- find max, min , fast O(1)
+- insert last, O(1), but need to reconstruct
+so O(1) + O(lg(N))
+- remove item , O(N) + check
+O(N) +O(lg(N)) = O(N)
+

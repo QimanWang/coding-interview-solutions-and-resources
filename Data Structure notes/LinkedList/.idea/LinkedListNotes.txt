@@ -1,0 +1,46 @@
+//Linked List
+
+*a node compose of node and reference
+*last node reference points to null
+class Node{
+    data
+    Node netxNode
+}
+*no random access
+*can create stacks, queues
+*most operation require sequential searching, which is bad O(N0
+
+*advantages
+- dynamic, meaning the size can change by itself
+- allocates needed memory in run time
+- fast access to the first element
+- can store item with difference size,
+while array only allow same size data
+- size can increase when needed by itself
+
+*disadvantages
+- waste memory because of references.
+- nodes are read in from begining to end,
+when needing access to a node.so insert or remove is O(N)
+- so maybe we can use doubly linked list, to allow access from
+begining or the end. But uses more memory for references.
+
+*operations
+- insertAtStart(6); // insert new node at begining, fast O(1)
+point the reference of the new node to the begining of the linkedlist
+- insertAtEnd(6); //insert new node at the end , slow O(N)
+have to go through the whole list
+- removeAtBegining(6); // remove first node , fast O(1)
+just set the pointer to null
+- remove() // remove a node in the list , slow O(N)
+have to linear search then to remove the node, you update the references
+
+//doubly linked list
+- has pointer to previous and next node
+class Node{
+    data
+    Node previousNode
+    Node NextNode
+}
+- does require more memory for the extra reference pointers
+

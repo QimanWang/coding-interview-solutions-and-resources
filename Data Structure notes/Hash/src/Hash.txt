@@ -1,0 +1,85 @@
+//Hash
+- associative arrays/maps/dictionaries
+- ADT
+- goal O(1) for most operations
+
+*operations
+- add key-value pair
+- remove key-value pair
+- look up existing key-value pair
+- look up value associated with a given key
+- no sorting
+
+~hash Function
+- distribute the keys uniformly into buckets(array)
+- n: number of key
+- m: number of bucket , size of array
+h(x) = n%m
+prime number is good for m
+- string we can convert to ascii
+
+~collision
+- chaining, put multiple items into same slot
+using linked list, if bad function, basically a liked list
+- open addressing , find empty slot
+ linear probing , put next slot, repeat
+ quadratic , try 1,2,4,8 slot away
+ rehashing , hashing result again
+
+***average is O(1), worst O(N)
+
+~ resizing
+- load factor , n/m
+apporach 1 if almost full
+
+*operation
+- put(key, value)
+- get(key)
+
+map in java collection
+
+
+//hashmap
+- map contain no duplicates
+- each key map to one value
+- no guarantee order
+- hashtable is not synchronized, but slower
+ dont allot null keys or null value
+- hashmap not synchronized
+ allow one null key and many null values
+- hash function help map the key to value
+perfect hash function map O(1)
+- map.get("lit") return null if no such key
+- iterator allow removing items mid iteration
+ ~~~~~~~~~~~~~~~
+ public static void printMap(Map mp) {
+     Iterator it = mp.entrySet().iterator();
+     while (it.hasNext()) {
+         Map.Entry pair = (Map.Entry)it.next();
+         System.out.println(pair.getKey() + " = " + pair.getValue());
+         it.remove(); // avoids a ConcurrentModificationException
+     }
+ }
+
+ ~~~~~
+ If you're only interested in the keys, you can iterate through the keySet() of the map:
+
+ Map<String, Object> map = ...;
+
+ for (String key : map.keySet()) {
+     // ...
+ }
+ If you only need the values, use values():
+
+ for (Object value : map.values()) {
+     // ...
+ }
+ Finally, if you want both the key and value, use entrySet():
+
+ for (Map.Entry<String, Object> entry : map.entrySet()) {
+     String key = entry.getKey();
+     Object value = entry.getValue();
+     // ...
+ }
+ One caveat: if you want to remove items mid-iteration, you'll need to do so via an Iterator (see karim79's answer).
+ However, changing item values is OK (see Map.Entry).
