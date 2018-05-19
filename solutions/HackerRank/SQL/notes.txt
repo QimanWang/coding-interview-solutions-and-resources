@@ -1,0 +1,38 @@
+Join types:
+
+
+Cross join :
+joins every row in table 1 with every row in table 2.
+no need for any join condition or predicates.
+
+SELECT
+    t1.id, t2.id
+FROM
+    t1
+CROSS JOIN t2;
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Inner join: functionally same as join
+join rows that have matching predicates in both rows.
+
+SELECT
+    t1.id, t2.id
+FROM
+    t1
+        INNER JOIN
+    t2 ON t1.pattern = t2.pattern;
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Left join: Inner join plus all row in left.
+what happens to all the left rows that dont have matching predicates?
+it will fill it with null.
+
+SELECT
+    t1.id, t2.id
+FROM
+    t1
+        LEFT JOIN
+    t2 ON t1.pattern = t2.pattern
+ORDER BY t1.id;
+
+Right join is the same, but flipped.
