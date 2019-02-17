@@ -31,7 +31,7 @@ def threeNumberSUm(array, targetSum):
     
     return triplets 
 
-print(threeNumberSUm([1,2,3,4,5,6,7,8],7))
+print(threeNumberSUm([1,2,3,4,5,6,7,8],10))
 
 
             

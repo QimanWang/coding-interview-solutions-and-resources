@@ -1,0 +1,13 @@
+array manipulation with pointers:
+    - 3 sum
+    - smallest difference
+    
+
+
+    
+
+
+
+
+
+    

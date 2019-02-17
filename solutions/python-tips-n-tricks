@@ -1,0 +1,15 @@
+ary1.sort() - sorts in palce
+float("inf") * -1 : extreme number
+for ind,val in enumerate(iterable): - return tuples of index and value
+a,b = b, a+b : interesting
+
+# update trick
+# the for will stop on the idx and update with numebr we want to replace,
+    # the i's before that will be updated with val from i+1
+    for i in range( idx + 1):
+        if i == idx:
+            array[i] = num
+        else:
+            array[i] = array[i+1]
+
+
