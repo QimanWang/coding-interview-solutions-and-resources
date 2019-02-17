@@ -11,5 +11,7 @@ a,b = b, a+b : interesting
             array[i] = num
         else:
             array[i] = array[i+1]
-
-
+ord(): returns unicode index of a char
+chr(): returns char rep of unicode
+collections.Counter() : return a dict of char tallies in order
+for r in range(height)[::-1]: height, height -1 ,.... 0
