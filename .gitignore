@@ -1,2 +1,4 @@
 .vscode
 *.json
+*/settings.json
+settings.json
