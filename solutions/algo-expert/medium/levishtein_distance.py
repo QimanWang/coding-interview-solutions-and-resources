@@ -16,12 +16,6 @@ c             2
 O(NM) space
 O(NM) time
 
-
-O(NM) time
-O(max(N,M)) space
-we see that we only need the last 2 rows of data,
-
-
 '''
 def levenshteinDistance_full_matrix(str1, str2):
     # Write your code here.
@@ -52,6 +46,10 @@ def levenshteinDistance_full_matrix(str1, str2):
 
 
 
+
+O(NM) time
+O(max(N,M)) space
+we see that we only need the last 2 rows of data,
 
 def levenshteinDistance_two_row(str1, str2):
 
@@ -95,7 +93,7 @@ def levenshteinDistance_two_row(str1, str2):
                 curr_row[c] = prev_row[c-1]
             else:
                 curr_row[c] = 1+min(prev_row[c],prev_row[c-1],curr_row[c-1])
-        print('-'*10)
+        print('-'*12)
         print(prev_row)
         print(curr_row)
         
