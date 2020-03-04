@@ -1,5 +1,5 @@
 '''
-fib is defind as a sequence, 0,1,n-1 + n-2,
+fib is defind as a sequence, 0,1,n-1 + n-2
 '''
 
 def getNthFib(n):

@@ -17,3 +17,19 @@ ord(): returns unicode index of a char
 chr(): returns char rep of unicode
 collections.Counter() : return a dict of char tallies in order
 for r in range(height)[::-1]: height, height -1 ,.... 0
+
+
+"""
+this genearte all 4 adjacent neighbors
+"""
+loc = [2,2]
+print(loc)
+
+increment = [0,1,0,-1,0]
+
+for i in range(len(increment)-1):
+    newr = loc[0] + increment[i]
+    newc = loc[1] - increment[i+1]
+    print([newr,newc])
+
+

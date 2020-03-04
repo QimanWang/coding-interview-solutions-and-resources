@@ -1,4 +1,7 @@
-def reverse(s):
+"""
+reverse a string
+"""
+def reverse_string(s):
     s = list(s)
     left,right = 0, len(s)-1
     while left < right:
@@ -9,5 +12,5 @@ def reverse(s):
     return ''.join(s)
 
 
-print(reverse('abc'))
+print(reverse_string('abc'))
 

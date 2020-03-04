@@ -1,16 +1,6 @@
-# def bubbleSort(array):
-#     # Write your code here.
-# 	for i in range(len(array)-1):
-# 		for j in range(i,len(array)-1):
-# 			if array[j] > array[j+1]:
-# 				swap(array,j)
-# 	return array
-
-# def swap(array,j):
-# 	temp =array[j]
-# 	array[j]= array[j+1]
-# 	array[j+1]=temp
-
+'''
+bubble biggest number to right each iteration
+'''
 
 def bubbleSort(array):
     isSorted = False

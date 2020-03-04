@@ -1,13 +1,12 @@
 '''
+# dfs means traverse as deep as you can before going back to your parent.
+
 dfs: 
 Time:O(V+E)
 space = O(V), worst case we make a call stack for every vertex.
 
 '''
-# Do not edit the class below except
-# for the depthFirstSearch method.
-# Feel free to add new properties
-# and methods to the class.
+
 class Node:
     def __init__(self, name):
         self.children = []
@@ -18,7 +17,6 @@ class Node:
         return self
 
     def depthFirstSearch(self, array):
-        # dfs means traverse as deep as you can before going back to your parent.
 		
         # recursive call on the child
 		array.append(self.name)

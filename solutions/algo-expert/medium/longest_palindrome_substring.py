@@ -37,15 +37,13 @@ def longestPalindromicSubstring(string):
         if string[i-1]==string[i+1]:
             #expand both side
             temp_max_pal=expand(string,i-1,i+1)
-            
-            if len(temp_max_pal) >len(max_pal):
-                max_pal=temp_max_pal
+
         #even
-        if string[i]==string[i+1]:
+        elif string[i]==string[i+1]:
             temp_max_pal=expand(string,i,i+1)
 
-            if len(temp_max_pal) >len(max_pal):
-                max_pal=temp_max_pal
+        if len(temp_max_pal) >len(max_pal):
+            max_pal=temp_max_pal
         
 
     return max_pal
